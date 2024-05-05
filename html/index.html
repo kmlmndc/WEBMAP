@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/leaflet.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- Navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><button class="btn btn-outline-primary"><img src="../img/cosblogo.png"
+          alt=""></button></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><button class="btn btn-outline-primary">İMAR</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><button class="btn btn-outline-primary">İNŞAAT</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><button class="btn btn-outline-primary">MAKİNE ENERJİ</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><button class="btn btn-outline-primary">ÇEVRE YÖNETİM SİSTEMLERİ</button></a>
+        </li>
+      </ul>
+      <form class="d-flex ms-auto">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Main Content  -->
+  <div class="wrapper d-flex align-items-stretch">
+    
+    <!-- Left Sidebar  -->
+    <nav id="sidebar" class="active">
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+        </button>
+      </div>
+      <div id="left-side-panel">
+
+        <ul class="list-unstyled components mb-5">
+
+          <li>
+            <p>OSM <input type="checkbox" id="toggleLayerOSM" checked></input></p>
+          </li>
+          <li>
+            <p>Uydu Görüntüsü<input type="checkbox" id="toggleLayerSat"></input></p>
+          </li>
+          <li>
+            <p>Topoğrafya<input type="checkbox" id="toggleLayerTer"></input></p>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- Map Content  -->
+    <div id="content" class="">
+      <div id="map-div"></div>
+      <div id="footer" class="overlay bottom d-block">
+        <h6 id="map_coords-itrf" class="text-center d-inline"></h6>
+        <h6 id="map_coords" class="text-center d-inline"></h6>
+        <h6 class="text-center ">&copy;2024 <a href="http://www.kemalmandaci.com" target="_blank">kmlmndc</a></h6>
+      </div>
+    </div>
+    <!-- Right Sidebar -->
+    <nav id="sidebarright" class="active">
+      <div class="custom-menu">
+        <button type="button" id="sidebarrightCollapse" class="btn btn-primary">
+        </button>
+      </div>
+      <div id="right-side-panel" class="col-md-1">
+
+
+        <ul class="list-unstyled components mb-5">
+
+          <li>
+            <p>Yerleşim Planı <input type="checkbox" id="toggleYerlesimPlani"></input></p>
+            <p>Şeffaflık: <input type="range" min="0" max="1" step="0.01" value="0.5" id="opacityYerlesim"></p>
+          </li>
+
+        </ul>
+      </div>
+
+    </nav>
+    <!-- Coordinates -->
+  
+  </div>
+  
+
+  <script src="../js/leaflet.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/proj4.js"></script>
+  <script src="../js/leaflet.ajax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.gridlayer.googlemutant"></script>
+  <script src="../js/popper.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
